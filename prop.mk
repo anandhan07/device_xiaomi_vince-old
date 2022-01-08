@@ -1,5 +1,5 @@
 #
-# system.prop for vince
+# prop.mk for vince
 #
 
 # ART
@@ -64,13 +64,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 vendor.audio.feature.snd_mon.enable=true \
 vendor.audio.feature.compr_cap.enable=false \
 vendor.audio.feature.hifi_audio.enable=true \
-vendor.audio.feature.hdmi_edid.enable=true  \
-endor.audio.feature.spkr_prot.enable=true  \
+vendor.audio.feature.hdmi_edid.enable=true \
 vendor.audio.feature.dsm_feedback.enable=false \
-vendor.audio.feature.ssrec.enable=true  \
+vendor.audio.feature.ssrec.enable=true \
 vendor.audio.feature.compr_voip.enable=true \
 vendor.audio.feature.kpi_optimize.enable=true \
-vendor.audio.feature.usb_offload.enable=false  \
+vendor.audio.feature.usb_offload.enable=false \
 vendor.audio.feature.usb_offload_burst_mode.enable=false \
 vendor.audio.feature.usb_offload_sidetone_volume.enable=false \
 vendor.audio.feature.src_trkn.enable=true \
@@ -170,7 +169,6 @@ ro.vendor.display.cabl=2 \
 sdm.debug.disable_skip_validate=1 \
 vendor.display.disable_skip_validate=1 \
 vendor.display.disable_rotator_downscale=1 \
-vendor.display.use_smooth_motion=1 \
 vendor.display.enable_default_color_mode=1 \
 vendor.gralloc.enable_fb_ubwc=1
 

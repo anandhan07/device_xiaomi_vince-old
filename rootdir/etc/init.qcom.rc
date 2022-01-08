@@ -129,8 +129,8 @@ on boot
     # Create hvdcp_opti directory
     mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
 
-# msm specific files that need to be created on /data
 on post-fs-data
+    # msm specific files that need to be created on /data
     mkdir /data/vendor/misc 01771 system system
 
     # Create directory used by display clients
@@ -142,7 +142,7 @@ on post-fs-data
     # Create directory used for camera
     mkdir /data/vendor/camera 0770 camera camera
 
-    #Create folder for mm-qcamera-daemon
+    # Create folder for mm-qcamera-daemon
     mkdir /data/misc/camera 0770 camera camera
 
     mkdir /data/vendor/ramdump 0771 root system
@@ -177,7 +177,7 @@ on post-fs-data
 
     chown system system /persist/WCNSS_qcom_wlan_nv.bin
 
-    #Create directories for Location services
+    # Create directories for Location services
     mkdir /data/vendor/location 0770 gps gps
     mkdir /data/vendor/location/mq 0770 gps gps
     mkdir /data/vendor/location/xtwifi 0770 gps gps
@@ -201,7 +201,7 @@ on post-fs-data
 
     setprop vold.post_fs_data_done 1
 
-    #Create FM dir for patchdownloader
+    # Create FM dir for patchdownloader
     mkdir /data/vendor/fm 0770 system system
     chmod 0770 /data/vendor/fm
 
@@ -235,7 +235,7 @@ on property:sys.boot_completed=1
     write /sys/block/dm-0/queue/read_ahead_kb 512
     write /sys/block/dm-1/queue/read_ahead_kb 512
 
-# Restrict permissions to socket file 
+    # Restrict permissions to socket file 
     # to hide Magisk & co.
     chmod 440 /proc/net/unix
     
@@ -352,8 +352,8 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     disabled
     oneshot
 
-# FPS Info
-    on boot
+on boot
+    # FPS Info
     chown system graphics /sys/class/graphics/fb0/measured_fps
     chmod 0666 /sys/class/graphics/fb0/measured_fps
     
