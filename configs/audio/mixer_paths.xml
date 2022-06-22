@@ -1383,43 +1383,6 @@
         <ctl name="QUIN_MI2S_RX Audio Mixer MultiMedia2" value="1" />
     </path>
 
-    <!-- These are actual sound device specific mixer settings -->
-    <path name="adc1">
-        <ctl name="ADC1 Volume" value="6" />
-        <ctl name="DEC1 MUX" value="ADC1" />
-        <ctl name="ADC1_INP1 Switch" value="1" />
-    </path>
-
-    <path name="adc2">
-        <ctl name="ADC2 Volume" value="6" />
-        <ctl name="DEC1 MUX" value="ADC2" />
-    </path>
-
-    <path name="adc3">
-        <ctl name="ADC3 Volume" value="6" />
-        <ctl name="DEC1 MUX" value="ADC2" />
-        <ctl name="MI2S_TX Channels" value="One" />
-        <ctl name="ADC2 MUX" value="INP3" />
-    </path>
-
-    <path name="hdmi">
-    </path>
-
-    <path name="speaker">
-    </path>
-
-    <path name="speaker-and-hdmi">
-        <path name="speaker" />
-        <path name="hdmi" />
-    </path>
-
-    <path name="wsa-speaker">
-        <ctl name="RX3 MIX1 INP1" value="RX1" />
-        <ctl name="RX3 Digital Volume" value="84" />
-        <ctl name="LINE_OUT" value="Switch" />
-        <ctl name="SpkrMono WSA_RDAC" value="Switch" />
-    </path>
-
     <!-- VoIP Rx settings -->
     <path name="audio-playback-voip">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia10" value="1" />
@@ -1473,6 +1436,43 @@
         <ctl name="MultiMedia10 Mixer AFE_PCM_TX" value="1" />
     </path>
 
+    <!-- These are actual sound device specific mixer settings -->
+    <path name="adc1">
+        <ctl name="ADC1 Volume" value="6" />
+        <ctl name="DEC1 MUX" value="ADC1" />
+        <ctl name="ADC1_INP1 Switch" value="1" />
+    </path>
+
+    <path name="adc2">
+        <ctl name="ADC2 Volume" value="6" />
+        <ctl name="DEC1 MUX" value="ADC2" />
+    </path>
+
+    <path name="adc3">
+        <ctl name="ADC3 Volume" value="6" />
+        <ctl name="DEC1 MUX" value="ADC2" />
+        <ctl name="MI2S_TX Channels" value="One" />
+        <ctl name="ADC2 MUX" value="INP3" />
+    </path>
+
+    <path name="hdmi">
+    </path>
+
+    <path name="speaker">
+    </path>
+
+    <path name="speaker-and-hdmi">
+        <path name="speaker" />
+        <path name="hdmi" />
+    </path>
+
+    <path name="wsa-speaker">
+        <ctl name="RX3 MIX1 INP1" value="RX1" />
+        <ctl name="RX3 Digital Volume" value="84" />
+        <ctl name="LINE_OUT" value="Switch" />
+        <ctl name="SpkrMono WSA_RDAC" value="Switch" />
+    </path>
+
     <path name="spkr-rx-calib">
         <ctl name="PRI_MI2S_RX_DL_HL Switch"  value="1" />
     </path>
@@ -1514,10 +1514,6 @@
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
     </path>
 
-    <path name="secondary-mic">
-    	<path name="adc3" />
-    </path>
-
     <path name="headphones">
         <ctl name="HP ANALOG SWITCH" value="ON" />
         <ctl name="MI2S_RX Channels" value="Two" />
@@ -1543,6 +1539,10 @@
         <path name="adc2" />
         <ctl name="ADC2 MUX" value="INP2" />
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
+    </path>
+
+    <path name="sub-mic">
+        <path name="adc3" />
     </path>
     
     <path name="sidetone-iir">
@@ -1688,12 +1688,15 @@
     </path>
 
     <path name="voice-speaker-dmic-ef">
-        <ctl name="ADC1 Volume" value="6" />
-        <ctl name="DEC2 MUX" value="ADC1" />
+        <!--
+        <ctl name="MI2S_TX Channels" value="Two" />
         <ctl name="ADC3 Volume" value="6" />
         <ctl name="DEC1 MUX" value="ADC2" />
-        <ctl name="MI2S_TX Channels" value="Two" />
         <ctl name="ADC2 MUX" value="INP3" />
+        <ctl name="ADC1 Volume" value="6" />
+        <ctl name="DEC2 MUX" value="ADC1" />
+        -->
+        <path name="speaker-dmic-endfire" />
     </path>
 
     <path name="voice-rec-dmic-ef">
