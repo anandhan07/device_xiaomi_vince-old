@@ -333,12 +333,6 @@ persist.vendor.usb.config.extra=none
 PRODUCT_PROPERTY_OVERRIDES += \
 wifi.interface=wlan0
 
-# ZRAM
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.zram.mark_idle_delay_mins=60 \
-ro.zram.first_wb_delay_mins=1440 \
-ro.zram.periodic_wb_delay_hours=24
-
 # Enable QC2 bufferqueue block-pool
 PRODUCT_PROPERTY_OVERRIDES += \
 vendor.qc2.use.bqpool=1
