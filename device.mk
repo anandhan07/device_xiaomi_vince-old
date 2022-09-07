@@ -104,7 +104,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio@2.1-impl \
     android.hardware.bluetooth.audio@2.1.vendor \
-    audio.a2dp.default \
     audio.bluetooth.default \
     audio.primary.msm8953 \
     audio.r_submix.default \
