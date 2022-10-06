@@ -93,6 +93,7 @@ vendor.audio.feature.incall_music.enable=true
 
 # Bluetooth
 PRODUCT_VENDOR_PROPERTIES += \
+bluetooth.device.default_name=Redmi 5 Plus \
 persist.vendor.service.bdroid.sibs=false \
 vendor.qcom.bluetooth.soc=smd \
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
