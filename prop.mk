@@ -383,3 +383,7 @@ debug.performance.tuning=1 \
 debug.egl.hw=1 \
 debug.sf.hw=1 \
 video.accelerate.hw=1
+
+# Zygote
+PRODUCT_SYSTEM_PROPERTIES += \
+zygote.critical_window.minute=10
