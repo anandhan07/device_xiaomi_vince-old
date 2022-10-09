@@ -32,6 +32,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 RICE_DEVICE := vince
 RICE_MAINTAINER := Anandhan
 SUSHI_BOOTANIMATION := 720
+TARGET_BUILD_GRAPHENEOS_CAMERA := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
