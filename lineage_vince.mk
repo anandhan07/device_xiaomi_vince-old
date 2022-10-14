@@ -28,11 +28,7 @@ $(call inherit-product, device/xiaomi/vince/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Sakura flags
-SAKURA_BUILD_TYPE := basicgapps
-TARGET_GAPPS_ARCH := arm64
-IS_PHONE := true
-SAKURA_MAINTAINER := Anandhan
+# Lineage/crdroid Stuff
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_BOOT_ANIMATION_RES := 720
 
